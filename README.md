@@ -1,7 +1,13 @@
 wbdv465 midterm
 ===============
 
-_subject to change__
+### Get Setup
+
+1. Fork this repo.
+2. Clone your fork.
+3. Run bundle.
+4. Create, migrate, and seed the database.
+5. Start the server.
 
 ### Current State
 
@@ -26,7 +32,12 @@ Right now, the site has basic authentication setup, as well as the ability for a
 6. Ensure books and reviews are browsable by guests but only users can mark books as being read, reading or will read, as well as write reviews.
 7. Ensure only admins can create, edit, and delete books.
 
-## Extra Credit:
+### Extra Credit:
 - Prevent users from creating multiple reviews for the same book.
 - Add the ability for photos to be added and displayed on books
+
+### How to submit
+
+1. Commit changes to your fork.
+2. Send a pull request from your fork to the original repo (this one.)
 
