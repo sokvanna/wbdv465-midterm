@@ -1,0 +1,43 @@
+!!! 5
+%html
+  %head
+    %title BookWorm
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+  %body
+    .container
+      %header.clearfix
+        %h1.brand= link_to "BookWorm", root_url
+
+        %nav.pull-left
+          %ul.nav.nav-pills
+            %li= link_to "Books", root_url #books_path
+            - if current_user
+              %li= link_to "Users", root_url #users_path
+
+        %nav.pull-right
+          %ul.nav.nav-pills
+            - if current_user
+              %li.disabled
+                = link_to "#" do
+                  Hello,
+                  = current_user.email
+              %li= link_to "Sign out", signout_path, method: "delete"
+            - else
+              %li= link_to "Sign in", signin_path
+              %li= link_to "Sign up", signup_path
+
+
+      .content
+        -flash.each do |name, msg|
+          - if msg.is_a? Array
+            - msg.each do |m|
+              = content_tag :div, m, :class => "alert alert-#{name}"
+          - else
+            = content_tag :div, msg, :class => "alert alert-#{name}"
+
+
+
+        = yield
