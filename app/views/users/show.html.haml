@@ -2,5 +2,6 @@
 %h3= @user.role
 
 = link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+- if is_user_admin?
+  \|
+  = link_to 'Back', users_path

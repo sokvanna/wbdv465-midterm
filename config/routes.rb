@@ -1,4 +1,6 @@
 Wbdv465Midterm::Application.routes.draw do
+  resources :books
+
   resources :sessions,   only: [:create]
   resources :users
 
@@ -6,5 +8,5 @@ Wbdv465Midterm::Application.routes.draw do
   get     "signin"       => "sessions#new",     as: "signin"
   delete  "signout"      => "sessions#destroy", as: "signout"
 
-  root "users#index"
+  root "books#index"
 end

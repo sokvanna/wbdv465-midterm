@@ -18,9 +18,11 @@
       .field
         = f.label :password_confirmation
         = f.password_field :password_confirmation, class: "form-control"
-      .field
-        = f.label :role
-        = f.text_field :role, class: "form-control"
+
+      - if is_user_admin?
+        .field
+          = f.label :role
+          = f.select :role, User::ROLES, {}, class: "form-control"
       .actions
         = f.submit 'Save', class: "btn btn-primary"
         = link_to 'Back', users_path, class: "btn btn-link"

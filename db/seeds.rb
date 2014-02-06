@@ -11,3 +11,12 @@ User.create!(email: "admin@bookworm.io", password: "password", password_confirma
 
 puts "creating member user.."
 User.create!(email: "user@drexel.edu", password: "password", password_confirmation: "password", role: "member")
+
+if Rails.env == "development"
+  puts "creating books"
+
+  12.times do
+    Book.create!({title: Faker::Lorem.sentence(3,false,3), author: Faker::Name.name, summary: Faker::Lorem.paragraph, page_count: Faker::Number.number(2)})
+  end
+
+end
