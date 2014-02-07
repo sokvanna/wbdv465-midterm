@@ -16,27 +16,27 @@ This is a basic application for book worms to share the books they’ve read, ar
 Right now, the site has basic authentication setup, as well as the ability for admins to create books. The follow features need to be implented
 
 ### Task
-1. Add ISBN attribute to book
-2. Validate book fields
+1. `5pts` -  Add ISBN attribute to book
+2.  `5pts` - Validate book fields
   - require a title, author, summary
   - require the ISBN to be 10 digits
-3. Implement the ability for users to add books to a “list”
+3. `20pts` -  Implement the ability for users to add books to a “list”
   - Hint: You will need to create a many to many relationship between users and books, as well has allowing that relationship to have a status attribute of “read”, “reading”, or “will read”
-4. Add the ability to add genres to books
+4.  `20pts` - Add the ability to add genres to books
   - Hint: Use https://github.com/mbleigh/acts-as-taggable-on
   - add code to allow viewing books for a particular tag (/tags/fiction)
-5. Add the ability for users to add reviews to books
+5. `20pts` -  Add the ability for users to add reviews to books
   - review should include a rating (0-5)
     - validate that a review is an acceptable value
   - review should belong to users and books
-6. Ensure books and reviews are browsable by guests but only users can mark books as being read, reading or will read, as well as write reviews.
-7. Ensure only admins can create, edit, and delete books.
+6.  `10pts` - Ensure books and reviews are browsable by guests but only users can mark books as being read, reading or will read, as well as write reviews.
 
 ### Extra Credit:
-- Prevent users from creating multiple reviews for the same book.
-- Add the ability for photos to be added and displayed on books
+- `5pts` - Prevent users from creating multiple reviews for the same book.
+- `5pts` - Add the ability for photos to be added and displayed on books
 
-### How to submit
+### How to submit 
+_`20pts` of your grade comes from correctly turning it in by midnight the night before class_
 
 1. Commit changes to your fork.
 2. Send a pull request from your fork to the original repo (this one.)
