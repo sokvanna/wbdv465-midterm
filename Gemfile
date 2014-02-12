@@ -19,4 +19,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'meta_request'
   gem 'hirb'
+gem 'acts-as-taggable-on'
+gem 'protected_attributes'
 end

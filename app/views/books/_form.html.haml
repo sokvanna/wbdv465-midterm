@@ -15,8 +15,14 @@
         = f.label :author
         = f.text_field :author, class: "form-control"
       .field
+        = f.label :tag_list
+        = f.text_field :tag_list, class: "form-control"
+      .field
         = f.label :page_count
         = f.number_field :page_count, class: "form-control"
+      .field
+        = f.label :isbn
+        = f.number_field :isbn, class: "form-control"
       .field
         = f.label :summary
         = f.text_area :summary, class: "form-control"

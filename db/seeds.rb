@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+
 puts "creating admin user.."
 User.create!(email: "admin@bookworm.io", password: "password", password_confirmation: "password", role: "admin")
 
@@ -16,7 +18,7 @@ if Rails.env == "development"
   puts "creating books"
 
   12.times do
-    Book.create!({title: Faker::Lorem.sentence(3,false,3), author: Faker::Name.name, summary: Faker::Lorem.paragraph, page_count: Faker::Number.number(2)})
+    Book.create!({title: Faker::Lorem.sentence(3,false,3), author: Faker::Name.name, summary: Faker::Lorem.paragraph, page_count: Faker::Number.number(2), isbn: Faker::Number.number(10), tag_list: 'fiction'})
   end
 
 end
