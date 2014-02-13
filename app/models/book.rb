@@ -3,4 +3,6 @@ class Book < ActiveRecord::Base
  validates :isbn, length: { minimum: 10 }
  attr_accessible :context, :name, :tag_list
  acts_as_taggable
+
+ has_many :reviews
 end
